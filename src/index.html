@@ -29,7 +29,7 @@
       <button id="copy" style="flex:0 0 100px;">コピー</button>
       <button id="clear" style="flex:0 0 100px;">クリア</button>
     </div>
-    <div class="resize-list" style="display: flex;margin: 8px 0;justify-content: center;">
+    <div class="resize-list" style="display: flex;margin: 8px 0;justify-content: center;flex-wrap: wrap;">
       長辺の上限(16:9の場合の短辺)
       <label><input type="radio" name="resize" checked value="unlimited">無制限</label>
       <label><input type="radio" name="resize" value="1920">1920px(1080px)</label>
@@ -39,14 +39,14 @@
       <label><input type="radio" name="resize" value="854">854px(480px)</label>
       (gifはリサイズされません)
     </div>
-    <div class="option-list" style="display: flex;margin: 8px 0;justify-content: center;">
+    <div class="option-list" style="display: flex;margin: 8px 0;justify-content: center;flex-wrap: wrap;">
       <label><input id="pngtojpg" type="checkbox" checked>pngを常にjpegに強制変換する</label>
       <label><input id="autocopy" type="checkbox" checked>画像アップロード時にURLを自動的にコピーする</label>
     </div>
   </div>
   <div id="image-list" style="flex:1 1 0;overflow-y: scroll;display:flex;flex-wrap: wrap;justify-content: center;align-content: flex-start;">
   </div>
-  <div style="flex:0 0 auto;display: flex;justify-content: center;">
+  <div style="flex:0 0 auto;display: flex;justify-content: center;flex-wrap: wrap;">
     <div>製作者</div>
     <div style="margin:0 2px;"></div>
     <a href="https://twitter.com/Fushihara">@Fushihara</a>

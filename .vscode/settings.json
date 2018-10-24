@@ -1,0 +1,4 @@
+{
+  "window.title": "プロジェクト名 - ${activeEditorMedium}${separator}${rootPath}",
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}

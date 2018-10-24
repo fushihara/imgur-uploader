@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>imgur ブラウザアップローダー</title>
+<style>
+  * {
+    word-break: break-all;
+    box-sizing: border-box;
+  }
+  body{
+    margin:0;
+  }
+  .resize-list > label , .option-list > label{
+    background-color: #89ffff;
+    border-radius: 10px;
+    margin: 0 3px;
+    padding-right: 7px;
+  }
+</style>
+<script type="module" src="./index.js"></script>
+<div style="height:100vh;width:100vw;overflow: hidden;display: flex;flex-direction: column;">
+  <div style="flex:0 0 auto;">
+    <div style="display: flex;justify-content: center;">
+      画像をペーストorファイルをドロップでimgurに投稿
+    </div>
+    <div style="display: flex;justify-content: center;font-size:small;">
+      実況用。<a href="">readmeはこちら。</a>
+    </div>
+    <div style="display:flex;justify-content: center;">
+      <textarea id="textarea" style="width:500px;height:100px;font-family: monospace;" placeholder="アップロードしたURL一覧"></textarea>
+      <button id="copy" style="flex:0 0 100px;">コピー</button>
+      <button id="clear" style="flex:0 0 100px;">クリア</button>
+    </div>
+    <div class="resize-list" style="display: flex;margin: 8px 0;justify-content: center;">
+      長辺の上限(16:9の場合の短辺)
+      <label><input type="radio" name="resize" checked value="unlimited">無制限</label>
+      <label><input type="radio" name="resize" value="1920">1920px(1080px)</label>
+      <label><input type="radio" name="resize" value="1600">1600px(900px)</label>
+      <label><input type="radio" name="resize" value="1280">1280px(720px)</label>
+      <label><input type="radio" name="resize" value="1024">1024px(576px)</label>
+      <label><input type="radio" name="resize" value="854">854px(480px)</label>
+      (gifはリサイズされません)
+    </div>
+    <div class="option-list" style="display: flex;margin: 8px 0;justify-content: center;">
+      <label><input id="pngtojpg" type="checkbox" checked>pngを常にjpegに強制変換する</label>
+      <label><input id="autocopy" type="checkbox" checked>画像アップロード時にURLを自動的にコピーする</label>
+    </div>
+  </div>
+  <div id="image-list" style="flex:1 1 0;overflow-y: scroll;display:flex;flex-wrap: wrap;justify-content: center;align-content: flex-start;">
+  </div>
+  <div style="flex:0 0 auto;display: flex;justify-content: center;">
+    <div>製作者</div>
+    <div style="margin:0 2px;"></div>
+    <a href="https://twitter.com/Fushihara">@Fushihara</a>
+    <div style="margin:0 5px;">/</div>
+    <div>source</div>
+    <div style="margin:0 2px;"></div>
+    <a href="">github/fushihara/xxxx</a>
+    <div style="margin:0 5px;">/</div>
+    <div>support chrome 70</div>
+    <div style="margin:0 5px;">/</div>
+    <!-- <div>imgur api token</div>
+    <div style="margin:0 2px;"></div>
+    <input type="text" id="api-token" style="width:9em;">
+    <div style="margin:0 5px;">/</div>-->
+    <a href="https://qiita.com/AKB428/items/a5f68a3288cc596975ae">apiTokenの取得方法</a>
+    <div style="margin:0 5px;">/</div>
+    <a href="https://imgur.com/">imgur.com</a>
+  </div>
+</div>
+<div id="drop" style="position: absolute;height: 100vh;width: 100vw;top: 0;left: 0;display: none;background: #0000009e;color: #fff;align-items: center;justify-content: center;">
+  ドロップでアップロード
+</div>

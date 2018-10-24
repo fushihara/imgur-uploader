@@ -1,0 +1,40 @@
+{
+  "exclude": [
+    "./docs/"
+  ],
+  "compilerOptions": {
+    // コンパイルバージョン。これを古い値にすると、xxというメソッドは無い！というエラーが出るようになる
+    "target": "es2017",
+    // nodejsが標準対応しているcommonjsを指定
+    "module": "es6",
+    "sourceMap": true,
+    "outDir": "./docs",
+    "rootDir": "./src",
+    // 文字コード指定。念の為。
+    "charset": "utf8",
+    "alwaysStrict": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    // d.tsファイルも作る事を指定する
+    "declaration": true,
+    // trueでBOMを削除する。念の為
+    "emitBOM": true,
+    // inlineSourceMapはchrome68で非対応なので無し。この項目を指定する時は"sourceMap"の指定を削除する必要がある。
+    //"inlineSourceMap": true
+    // ソースマップにソースコード自体を入れる。
+    "inlineSources": true,
+    "newLine": "LF",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitUseStrict": false,
+    // trueで未使用のローカル変数をエラーにする。過剰かも
+    "noUnusedLocals": false,
+    // trueで未使用の関数の引数をエラーにする。過剰かも
+    "noUnusedParameters": true,
+    // tureでコンパイルにかかった時間やメモリ使用量を表示する。邪魔かも
+    "diagnostics": true,
+    "strictNullChecks": true,
+  }
+}

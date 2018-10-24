@@ -1,0 +1,19 @@
+{
+  "name": "imgur-browser-uploader",
+  "version": "1.0.0",
+  "description": "imgurに画像をアップロードするhtmlページ",
+  "main": "./out/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^10.7.1",
+    "gulp": "^4.0.0",
+    "typescript": "^3.1.3"
+  }
+}
